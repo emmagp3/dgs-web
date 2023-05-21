@@ -1,16 +1,30 @@
-import Head from 'next/head';
+import Layout from '@/components/layout/layout';
+import { GetStaticProps } from 'next';
+import { initStore, getAllProductsCard } from '../../lib/stores';
+import type { ProductCardProps } from '@/components/product_card/product_card';
+import ProductCard from '@/components/product_card/product_card';
 
-export default function Home() {
+export default function Home({ products }: { products: ProductCardProps[] }) {
   return (
     <>
-      <Head>
-        <title>DGS - Inicio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <h1>DGS Hidraulica</h1>
-      </main>
+      <Layout title="Inicio">
+        <main>
+          <h1>DGS Hidraulica</h1>
+          {products.map((product) => (
+            <ProductCard key={product.model} {...product} />
+          ))}
+        </main>
+      </Layout>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  initStore();
+  const products = getAllProductsCard();
+  return {
+    props: {
+      products,
+    },
+  };
+};
