@@ -1,4 +1,4 @@
-import { Head } from 'next/document';
+import Head from 'next/head';
 import Navbar from '../navbar/navbar';
 
 interface LayoutProps {
@@ -10,7 +10,7 @@ export default function Layout({ title, children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>DGS - {title}</title>
+        <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
