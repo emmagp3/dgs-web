@@ -1,5 +1,3 @@
-export {
-  initStore,
-  getAllProductsDetails,
-  getAllProductsCard,
-} from './product.store';
+export { getProductDetails, getAllProductsCard } from './product.store';
+
+export { getAllServices } from './service.store';
