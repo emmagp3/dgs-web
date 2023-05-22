@@ -46,8 +46,10 @@ const initStore = () => {
   state.products = products;
 };
 
-const getAllProductsDetails = () => {
-  return state.products;
+initStore();
+
+const getProductDetails = (model: string) => {
+  return state.products.find((product) => product.model === model);
 };
 
 const getAllProductsCard = () => {
@@ -60,4 +62,14 @@ const getAllProductsCard = () => {
   });
 };
 
-export { initStore, getAllProductsDetails, getAllProductsCard };
+const getAllProductPaths = () => {
+  return state.products.map((product) => {
+    return {
+      params: {
+        model: product.model,
+      },
+    };
+  });
+};
+
+export { getProductDetails, getAllProductsCard, getAllProductPaths };
