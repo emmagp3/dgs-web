@@ -11,10 +11,10 @@ export default function Navbar() {
           <Link href="#">¿Quiénes somos?</Link>
         </li>
         <li>
-          <Link href="#">Productos</Link>
+          <Link href="/productos">Productos</Link>
         </li>
         <li>
-          <Link href="#">Servicios</Link>
+          <Link href="/servicios">Servicios</Link>
         </li>
         <li>
           <Link href="#">Contacto</Link>
