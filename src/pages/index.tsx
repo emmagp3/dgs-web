@@ -3,6 +3,8 @@ import { GetStaticProps } from 'next';
 import { getAllProductsCard } from '../../lib/stores';
 import type { ProductCardProps } from '@/components/product_card/product_card';
 import ProductCard from '@/components/product_card/product_card';
+import Form from '@/components/form/form';
+import { FormEvent } from 'react';
 
 export default function Home({ products }: { products: ProductCardProps[] }) {
   return (
@@ -12,6 +14,7 @@ export default function Home({ products }: { products: ProductCardProps[] }) {
         {products.map((product) => (
           <ProductCard key={product.model} {...product} />
         ))}
+        <Form />
       </Layout>
     </>
   );
