@@ -17,7 +17,7 @@ export default function Navbar() {
           <Link href="/servicios">Servicios</Link>
         </li>
         <li>
-          <Link href="#">Contacto</Link>
+          <Link href="/#contacto">Contacto</Link>
         </li>
       </ul>
       <div>{/**TODO: VAMEX DISTRIBUIDOR AUTORIZADO */}</div>
