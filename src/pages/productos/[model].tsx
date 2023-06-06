@@ -16,7 +16,9 @@ export default function ProductPage({ product }: { product: ProductModel }) {
       <button onClick={router.back}>Volver atrás</button>
       <article>
         <h2>{name}</h2>
-        <h3>{model}</h3>
+        <h3>
+          Modelo: <small>{model}</small>
+        </h3>
         <p>{description}</p>
         <img src={image} alt={name} />
         <button>Contactar al vendedor</button>
