@@ -1,17 +1,21 @@
 import React, { MouseEventHandler } from 'react';
 
-interface WhatsAppButton {
-  image: React.ReactNode | undefined;
+interface ContactButtonProps {
+  image?: string;
   onClick: MouseEventHandler;
 }
 
-export default function WhatsAppButton({
+export default function ContactButton({
   image = undefined,
   onClick,
-}: WhatsAppButton) {
+}: ContactButtonProps) {
   return (
     <button onClick={onClick}>
-      {image ? <image /> : 'Contactar al vendedor'}
+      {image ? (
+        <img src={image} alt="Whatsapp Icon" />
+      ) : (
+        'Contactar al vendedor'
+      )}
     </button>
   );
 }
