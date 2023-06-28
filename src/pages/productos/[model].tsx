@@ -6,7 +6,7 @@ import {
 import type { ProductModel } from '../../../lib/models';
 import Layout from '@/components/layout/layout';
 import { useRouter } from 'next/router';
-import WhatsAppButton from '@/components/whatsapp_button/whatsappButton';
+import ContactButton from '@/components/whatsapp_button/whatsappButton';
 import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
 
 export default function ProductPage({ product }: { product: ProductModel }) {
@@ -20,9 +20,13 @@ export default function ProductPage({ product }: { product: ProductModel }) {
     router.push(message);
   };
 
+  const onClickBackButton = () => {
+    router.push('/productos');
+  };
+
   return (
     <Layout title={name}>
-      <button onClick={router.back}>Volver atrás</button>
+      <button onClick={onClickBackButton}>Ver productos</button>
       <article>
         <h2>{name}</h2>
         <h3>
@@ -30,7 +34,7 @@ export default function ProductPage({ product }: { product: ProductModel }) {
         </h3>
         <p>{description}</p>
         <img src={image} alt={name} />
-        <WhatsAppButton onClick={onClickWhatsAppButton} image={undefined} />
+        <ContactButton onClick={onClickWhatsAppButton} />
       </article>
     </Layout>
   );
