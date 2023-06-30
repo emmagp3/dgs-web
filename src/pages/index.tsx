@@ -6,6 +6,7 @@ import ProductCard from '@/components/product_card/product_card';
 import Form from '@/components/form/form';
 import ContactButton from '@/components/whatsapp_button/whatsappButton';
 import { useRouter } from 'next/router';
+import PresentationBanner from '@/components/banners/presentation_banner';
 
 export default function Home({ products }: { products: ProductCardProps[] }) {
   const router = useRouter();
@@ -16,12 +17,10 @@ export default function Home({ products }: { products: ProductCardProps[] }) {
 
   return (
     <Layout title="Inicio">
-      <h1>DGS Hidraulica</h1>
-
+      <PresentationBanner />
       {products.map((product) => (
         <ProductCard key={product.model} {...product} />
       ))}
-
       <Form />
       <ContactButton onClick={onClickWhatsAppButton} image="/whatsapp.svg" />
     </Layout>
