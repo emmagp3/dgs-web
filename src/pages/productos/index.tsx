@@ -11,9 +11,11 @@ export default function Product({
 }) {
   return (
     <Layout title="Productos">
-      {products.map((product) => (
-        <ProductCard key={product.model} {...product} />
-      ))}
+      <main>
+        {products.map((product) => (
+          <ProductCard key={product.model} {...product} />
+        ))}
+      </main>
     </Layout>
   );
 }

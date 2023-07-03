@@ -8,7 +8,7 @@ export default function Navbar() {
           <Link href="/">DGS HIDRAULICA</Link>
         </li>
         <li>
-          <Link href="#">¿Quiénes somos?</Link>
+          <Link href="/sobre-nosotros">¿Quiénes somos?</Link>
         </li>
         <li>
           <Link href="/productos">Productos</Link>

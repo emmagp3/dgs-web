@@ -27,15 +27,17 @@ export default function ProductPage({ product }: { product: ProductModel }) {
   return (
     <Layout title={name}>
       <button onClick={onClickBackButton}>Ver productos</button>
-      <article>
-        <h2>{name}</h2>
-        <h3>
-          Modelo: <small>{model}</small>
-        </h3>
-        <p>{description}</p>
-        <img src={image} alt={name} />
-        <ContactButton onClick={onClickWhatsAppButton} />
-      </article>
+      <main>
+        <div>
+          <h2>{name}</h2>
+          <h3>
+            Modelo: <small>{model}</small>
+          </h3>
+          <p>{description}</p>
+          <img src={image} alt={name} />
+          <ContactButton onClick={onClickWhatsAppButton} />
+        </div>
+      </main>
     </Layout>
   );
 }

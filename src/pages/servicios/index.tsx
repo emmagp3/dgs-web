@@ -7,9 +7,11 @@ import Service from '@/components/service/service';
 export default function Servicios({ services }: { services: ServiceModel[] }) {
   return (
     <Layout title="Servicios">
-      {services.map((service) => (
-        <Service key={service.id} {...service} />
-      ))}
+      <main>
+        {services.map((service) => (
+          <Service key={service.id} {...service} />
+        ))}
+      </main>
     </Layout>
   );
 }

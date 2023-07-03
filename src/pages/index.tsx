@@ -17,7 +17,9 @@ export default function Home({ products }: { products: ProductCardProps[] }) {
 
   return (
     <Layout title="Inicio">
-      <PresentationBanner />
+      <main>
+        <PresentationBanner />
+      </main>
       {products.map((product) => (
         <ProductCard key={product.model} {...product} />
       ))}
