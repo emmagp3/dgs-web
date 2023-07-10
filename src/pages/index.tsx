@@ -4,9 +4,9 @@ import { getAllProductsCard } from '../../lib/stores';
 import type { ProductCardProps } from '@/components/product_card/product_card';
 import ProductCard from '@/components/product_card/product_card';
 import Form from '@/components/form/form';
-import ContactButton from '@/components/whatsapp_button/whatsappButton';
+import ContactButton from '@/components/button/whatsappButton';
 import { useRouter } from 'next/router';
-import PresentationBanner from '@/components/banners/presentation_banner';
+import PrincipalHero from '@/components/banners/principal_hero';
 
 export default function Home({ products }: { products: ProductCardProps[] }) {
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function Home({ products }: { products: ProductCardProps[] }) {
   return (
     <Layout title="Inicio">
       <main>
-        <PresentationBanner />
+        <PrincipalHero />
       </main>
       {products.map((product) => (
         <ProductCard key={product.model} {...product} />
