@@ -1,0 +1,15 @@
+.primary {
+  background-color: #001449;
+  color: #FFFFFF;
+}
+
+.secondary {
+  background-color: #FFFFFF;
+  color: #001449;
+}
+
+.tiertary {
+  background-color: #005BC5;
+  color: #FFFFFF;
+  border: 0.1rem solid #005BC5;
+}
