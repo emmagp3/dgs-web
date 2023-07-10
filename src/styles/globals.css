@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ysabeau+Infant&display=swap');
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Fugaz One', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+button {
+  font-size: 1.4rem;
+  height: 4.4rem;
+  width: 28rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #001449;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+
+input,
+textarea {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+input {
+  height: 4rem;
+}
+
+textarea {
+  height: 20rem;
+  resize: none;
+}
