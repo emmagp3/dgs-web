@@ -6,8 +6,9 @@ import {
 import type { ProductModel } from '../../../lib/models';
 import Layout from '@/components/layout/layout';
 import { useRouter } from 'next/router';
-import ContactButton from '@/components/whatsapp_button/whatsappButton';
+import ContactButton from '@/components/button/whatsappButton';
 import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
+import Link from 'next/link';
 
 export default function ProductPage({ product }: { product: ProductModel }) {
   const router = useRouter();
@@ -20,14 +21,10 @@ export default function ProductPage({ product }: { product: ProductModel }) {
     router.push(message);
   };
 
-  const onClickBackButton = () => {
-    router.push('/productos');
-  };
-
   return (
     <Layout title={name}>
-      <button onClick={onClickBackButton}>Ver productos</button>
-      <main>
+      <main className="container">
+        <Link href="/productos">Ver productos</Link>
         <div>
           <h2>{name}</h2>
           <h3>
