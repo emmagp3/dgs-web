@@ -1,4 +1,7 @@
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import styles from './product_card.module.css';
+import Button from '../button/button';
 
 export interface ProductCardProps {
   model: string;
@@ -15,10 +18,17 @@ export default function ProductCard({ model, name, image }: ProductCardProps) {
   };
 
   return (
-    <section>
-      <h1>{name}</h1>
-      <img src={image} alt={name} />
-      <button onClick={handleNavigateButton}>Ver producto</button>
+    <section
+      className={`${styles.product} flex flex-column align-items-center`}>
+      <h2>{name}</h2>
+      <Image
+        className={styles.image}
+        src={image}
+        alt={name}
+        width={200}
+        height={200}
+      />
+      <Button onClick={handleNavigateButton}>Ver producto</Button>
     </section>
   );
 }

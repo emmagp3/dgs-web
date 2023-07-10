@@ -1,0 +1,18 @@
+.product {
+  border: 0.1rem #001449 solid;
+  border-radius: 1rem;
+  width: 35rem;
+}
+
+.product h2 {
+  color: #001449;
+}
+
+.product button {
+  margin: 2rem 0;
+}
+
+.image {
+  width: 20rem;
+  height: 20rem;
+}
