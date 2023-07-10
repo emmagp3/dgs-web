@@ -1,0 +1,16 @@
+.title {
+  color: #001449;
+}
+
+.description {
+  color: #686969;
+}
+
+.service {
+  margin: 2rem 0;
+  text-align: justify;
+}
+
+.service > button {
+  align-self: flex-end;
+}
