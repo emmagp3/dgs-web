@@ -1,0 +1,38 @@
+.nav {
+  background-color: #001449;
+  width: 100%;
+}
+
+.ul {
+  display: flex;
+  /* position: sticky; */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 6rem;
+  margin: 0;
+}
+
+.li {
+  list-style: none;
+  width: fit-content;
+}
+
+.link {
+  text-decoration: none;
+  color: #00B4FC;
+  font-size: 1.6rem;
+}
+
+.link:hover, .title {
+  color: #FFFFFF;
+}
+
+.vamex {
+  width: fit-content;
+  height: 3rem;
+}
+
+.active {
+  border-bottom: 0.4rem solid #FFFFFF;
+  padding-bottom: 0.6rem;
+}
