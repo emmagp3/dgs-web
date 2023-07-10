@@ -1,6 +1,8 @@
 import useForm from '@/hooks/useForm';
 import { useRouter } from 'next/router';
 import React, { FormEvent } from 'react';
+import styles from './form.module.css';
+import Button from '../button/button';
 
 export default function Form() {
   const { onChangeFields, formState } = useForm();
@@ -20,66 +22,75 @@ export default function Form() {
   };
 
   return (
-    <>
-      <h3 id="contacto">
+    <div
+      id="contacto"
+      className={`container flex flex-column align-items-center ${styles.form}`}>
+      <h3 className="text-center">
         ¡Solicita información especializada sobre nuestros productos!
       </h3>
-      <form onSubmit={onSubmit}>
-        <label htmlFor="nombre">Nombre: </label>
-        <input
-          type="text"
-          id="nombre"
-          name="firstName"
-          placeholder="Juan"
-          required
-          value={firstName}
-          onChange={onChangeFields}
-        />
+      <form onSubmit={onSubmit} className={`container grid ${styles.fields}`}>
+        <div className="flex flex-column">
+          <label htmlFor="nombre">Nombre: </label>
+          <input
+            type="text"
+            id="nombre"
+            name="firstName"
+            placeholder="Juan"
+            required
+            value={firstName}
+            onChange={onChangeFields}
+          />
+        </div>
+        <div className="flex flex-column">
+          <label htmlFor="apellido">Apellido: </label>
+          <input
+            type="text"
+            id="apellido"
+            name="lastName"
+            placeholder="Casas"
+            required
+            value={lastName}
+            onChange={onChangeFields}
+          />
+        </div>
+        <div className="flex flex-column">
+          <label htmlFor="email">Correo electrónico: </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tuemail@email.com"
+            required
+            value={email}
+            onChange={onChangeFields}
+          />
+        </div>
+        <div className="flex flex-column">
+          <label htmlFor="phone_number">Teléfono: </label>
+          <input
+            type="tel"
+            id="phone_number"
+            name="phone"
+            placeholder="55-22-44-55-00"
+            required
+            value={phone}
+            onChange={onChangeFields}
+          />
+        </div>
+        <div className="flex flex-column">
+          <label htmlFor="message">Mensaje:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Escribre un mensaje..."
+            defaultValue={message}
+            onChange={onChangeFields}></textarea>
+        </div>
 
-        <label htmlFor="apellido">Apellido: </label>
-        <input
-          type="text"
-          id="apellido"
-          name="lastName"
-          placeholder="Casas"
-          required
-          value={lastName}
-          onChange={onChangeFields}
-        />
-
-        <label htmlFor="email">Correo electrónico: </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="tuemail@email.com"
-          required
-          value={email}
-          onChange={onChangeFields}
-        />
-
-        <label htmlFor="phone_number">Teléfono: </label>
-        <input
-          type="tel"
-          id="phone_number"
-          name="phone"
-          placeholder="55-22-44-55-00"
-          required
-          value={phone}
-          onChange={onChangeFields}
-        />
-
-        <label htmlFor="message">Mensaje:</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Escribre un mensaje..."
-          defaultValue={message}
-          onChange={onChangeFields}
-        ></textarea>
-
-        <input type="submit" value="Enviar" />
+        <Button type="submit" variant="secondary">
+          Enviar
+        </Button>
       </form>
-    </>
+    </div>
   );
 }
