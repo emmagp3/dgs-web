@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ysabeau+Infant&display=swap');
 
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
