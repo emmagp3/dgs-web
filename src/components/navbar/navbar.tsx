@@ -7,7 +7,7 @@ export default function Navbar() {
   const router = useRouter();
 
   const isActive = (currentPath: string) => {
-    if (currentPath === router.pathname) {
+    if (router.pathname.startsWith(currentPath, 1)) {
       return 'active';
     }
     return '';
@@ -21,28 +21,32 @@ export default function Navbar() {
             className={`${styles.link} ${styles.title} ${
               styles[isActive('/')]
             }`}
-            href="/">
+            href="/"
+          >
             DGS HIDRAULICA
           </Link>
         </li>
         <li className={styles.li}>
           <Link
-            className={`${styles.link} ${styles[isActive('/sobre-nosotros')]}`}
-            href="/sobre-nosotros">
+            className={`${styles.link} ${styles[isActive('sobre-nosotros')]}`}
+            href="/sobre-nosotros"
+          >
             ¿Quiénes somos?
           </Link>
         </li>
         <li className={styles.li}>
           <Link
-            className={`${styles.link} ${styles[isActive('/productos')]}`}
-            href="/productos">
+            className={`${styles.link} ${styles[isActive('productos')]}`}
+            href="/productos"
+          >
             Productos
           </Link>
         </li>
         <li className={styles.li}>
           <Link
-            className={`${styles.link} ${styles[isActive('/servicios')]}`}
-            href="/servicios">
+            className={`${styles.link} ${styles[isActive('servicios')]}`}
+            href="/servicios"
+          >
             Servicios
           </Link>
         </li>
