@@ -1,0 +1,49 @@
+.hero {
+  color: #FFFFFF;
+  background-image: url('../../../public/main.png');
+  background-size: cover;
+  height: 52rem;
+  background-position: center center;
+}
+
+.title {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.about {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.element {
+  background-color: #FFFFFF;
+  color: #404040;
+  height: 21rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #005BC5;
+}
+
+.misionVision {
+  flex-wrap: wrap;
+  padding-top: 5rem;
+}
+
+.misionVision p {
+  margin: auto 5rem 5rem auto;
+}
+
+.mvinfo p {
+  width: 50rem;
+  color: #404040;
+  text-align: justify;
+}

@@ -1,41 +1,44 @@
 import Layout from '@/components/layout/layout';
+import styles from './sobre-nosotos.module.css';
 
 export default function AboutPage() {
   return (
     <Layout title="¿Quiénes Somos?">
-      <h1>Acerca de Nosotros</h1>
-      <section>
-        <div>
-          <h2>Desarrollo</h2>
-          <p>
-            En nuestra empresa nos preocupamos por la búsqueda constante de
-            nuevas soluciones tecnológicas en nuestros productos y servicios
-            para mejorar la eficiencia y la calidad del agua.
-          </p>
+      <div className={styles.hero}>
+        <h1 className={styles.title}>Acerca de Nosotros</h1>
+        <div className={`${styles.about} container`}>
+          <div className={styles.element}>
+            <h2 className={styles.subtitle}>Desarrollo</h2>
+            <p>
+              En nuestra empresa nos preocupamos por la búsqueda constante de
+              nuevas soluciones tecnológicas en nuestros productos y servicios
+              para mejorar la eficiencia y la calidad del agua.
+            </p>
+          </div>
+          <div className={styles.element}>
+            <h2 className={styles.subtitle}>Garantía</h2>
+            <p>
+              Nuestros productos y servicios cumplen con la normatividad y
+              estándares altos de calidad para asegurar la confianza y
+              satisfacción de nuestros clientes, implementando medidas y
+              políticas rigurosas en todo momento.
+            </p>
+          </div>
+          <div className={styles.element}>
+            <h2 className={styles.subtitle}>Sustentable</h2>
+            <p>
+              Nuestro compromiso es apoyar suministrando elementos que ayuden a
+              eliminar fugas y con ello lograr una mejor eficacia de su uso en
+              áreas de la industria, agua potable, agricultura, ganadería,
+              alcantarillado y saneamiento
+            </p>
+          </div>
         </div>
-        <div>
-          <h2>Garantía</h2>
-          <p>
-            Nuestros productos y servicios cumplen con la normatividad y
-            estándares altos de calidad para asegurar la confianza y
-            satisfacción de nuestros clientes, implementando medidas y políticas
-            rigurosas en todo momento.
-          </p>
-        </div>
-        <div>
-          <h2>Sustentable</h2>
-          <p>
-            Nuestro compromiso es apoyar suministrando elementos que ayuden a
-            eliminar fugas y con ello lograr una mejor eficacia de su uso en
-            áreas de la industria, agua potable, agricultura, ganadería,
-            alcantarillado y saneamiento
-          </p>
-        </div>
-      </section>
+      </div>
       <main>
-        <div>
-          <div>
-            <h2>Misión</h2>
+        <div className={`${styles.misionVision} flex justify-center container`}>
+          <div className={styles.mvinfo}>
+            <h2 className={styles.subtitle}>Misión</h2>
             <p>
               Nuestra visión como empresa es ser reconocidos por la excelencia
               en nuestros productos y servicios, y para lograrlo nos enfocamos
@@ -51,8 +54,8 @@ export default function AboutPage() {
               servicio de alta calidad.
             </p>
           </div>
-          <div>
-            <h2>Visión</h2>
+          <div className={styles.mvinfo}>
+            <h2 className={styles.subtitle}>Visión</h2>
             <p>
               Nuestra misión es brindar a nuestros clientes productos confiables
               y duraderos que satisfagan sus necesidades y expectativas, y así
