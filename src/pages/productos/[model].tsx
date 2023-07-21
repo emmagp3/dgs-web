@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import ContactButton from '@/components/button/whatsappButton';
 import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
 import Link from 'next/link';
+import styles from './products.module.css';
 
 export default function ProductPage({ product }: { product: ProductModel }) {
   const router = useRouter();
@@ -25,14 +26,16 @@ export default function ProductPage({ product }: { product: ProductModel }) {
     <Layout title={name}>
       <main className="container">
         <Link href="/productos">Ver productos</Link>
-        <div>
-          <h2>{name}</h2>
-          <h3>
-            Modelo: <small>{model}</small>
-          </h3>
-          <p>{description}</p>
-          <img src={image} alt={name} />
-          <ContactButton onClick={onClickWhatsAppButton} />
+        <div className={`${styles.details} flex`}>
+          <img className={styles.image} src={image} alt={name} />
+          <div className="flex flex-column">
+            <h2 className={styles.title}>{name}</h2>
+            <h3 className={styles.model}>
+              Modelo: <small>{model}</small>
+            </h3>
+            <p className={styles.description}>{description}</p>
+            <ContactButton onClick={onClickWhatsAppButton} />
+          </div>
         </div>
       </main>
     </Layout>
