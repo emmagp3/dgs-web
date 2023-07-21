@@ -1,0 +1,7 @@
+.products {
+  margin-top: 5rem;
+}
+
+.products div {
+  flex-wrap: wrap;
+}

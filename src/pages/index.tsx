@@ -7,6 +7,7 @@ import Form from '@/components/form/form';
 import ContactButton from '@/components/button/whatsappButton';
 import { useRouter } from 'next/router';
 import PrincipalHero from '@/components/banners/principal_hero';
+import styles from '../styles/Home.module.css';
 
 export default function Home({ products }: { products: ProductCardProps[] }) {
   const router = useRouter();
@@ -20,9 +21,14 @@ export default function Home({ products }: { products: ProductCardProps[] }) {
       <main>
         <PrincipalHero />
       </main>
-      {products.map((product) => (
-        <ProductCard key={product.model} {...product} />
-      ))}
+      <div className={`${styles.products} flex flex-column align-items-center`}>
+        <h2>Nuestros productos</h2>
+        <div className="container flex justify-center">
+          {products.map((product) => (
+            <ProductCard key={product.model} {...product} />
+          ))}
+        </div>
+      </div>
       <Form />
       <ContactButton onClick={onClickWhatsAppButton} image="/whatsapp.svg" />
     </Layout>
