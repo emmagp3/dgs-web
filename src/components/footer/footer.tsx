@@ -5,17 +5,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div>
-          <h2>Ubicación</h2>
-          <p>Calle S/N</p>
-          <p>Delegación</p>
-          <p>Cuidad de México</p>
-          <p>CP: XXXXXX</p>
+          <h2>Horarios</h2>
+          <p>Lun-Vie: 09:00 - 18:00</p>
+          <p>Sábados: 09:00 - 15:00</p>
+          <p>Domingos: Cerrado</p>
         </div>
         <div>
-          <h2>Horarios</h2>
-          <p>Lun-Vie: xx:xx - xx:xx</p>
-          <p>Sábados: xx:xx - xx:xx</p>
-          <p>Domingos: xx:xx - xx:xx</p>
+          <h2>Ubicación</h2>
+          <p>Miguel Hidalgo, CDMX</p>
         </div>
       </div>
       <div>
