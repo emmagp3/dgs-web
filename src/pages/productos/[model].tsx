@@ -9,7 +9,8 @@ import { useRouter } from 'next/router';
 import ContactButton from '@/components/button/whatsappButton';
 import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
 import Link from 'next/link';
-import styles from './products.module.css';
+import styles from './[model].module.css';
+import Button from '@/components/button/button';
 
 export default function ProductPage({ product }: { product: ProductModel }) {
   const router = useRouter();
@@ -25,16 +26,28 @@ export default function ProductPage({ product }: { product: ProductModel }) {
   return (
     <Layout title={name}>
       <main className="container">
-        <Link href="/productos">Ver productos</Link>
-        <div className={`${styles.details} flex`}>
+        {/* <Link className={styles.goBack} href="/productos">
+          Ver productos
+        </Link> */}
+        <div className={`${styles.details}`}>
           <img className={styles.image} src={image} alt={name} />
-          <div className="flex flex-column">
-            <h2 className={styles.title}>{name}</h2>
-            <h3 className={styles.model}>
-              Modelo: <small>{model}</small>
-            </h3>
+          <div className={styles.content}>
+            <div>
+              <h2 className={styles.title}>{name}</h2>
+              <p className={styles.model}>
+                Modelo: <small>{model}</small>
+              </p>
+            </div>
             <p className={styles.description}>{description}</p>
-            <ContactButton onClick={onClickWhatsAppButton} />
+            <div className={styles.buttons}>
+              <Button
+                variant="secondary"
+                onClick={() => router.push('/productos')}
+              >
+                Volver a Productos
+              </Button>
+              <ContactButton onClick={onClickWhatsAppButton} />
+            </div>
           </div>
         </div>
       </main>

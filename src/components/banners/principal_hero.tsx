@@ -8,13 +8,13 @@ export default function PrincipalHero() {
   const router = useRouter();
 
   return (
-    <div className={`${styles.hero} flex flex-column align-items-center`}>
+    <div className={styles.hero}>
       <Image
         className={styles.logo}
         src={dgsLogo}
         alt="Logo de DGS Hirdráulica"
       />
-      <h1 className={styles.title}>Manejo y control del líquido vital</h1>
+      <h2 className={styles.title}>Manejo y control del líquido vital</h2>
       <div className={styles.row}>
         <Button variant="tiertary" onClick={() => router.push('/productos')}>
           Ver productos

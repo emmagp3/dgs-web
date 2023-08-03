@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ysabeau+Infant&display=swap');
 
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%;
 }
@@ -8,6 +9,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
 }
 
 h1,
@@ -16,7 +18,12 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 2rem 0;
+  color: #001449;
+}
+
+p {
+  color: #404040;
 }
 
 body {
@@ -38,32 +45,24 @@ button:hover {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 90%;
   margin-inline: auto;
 }
 
-.flex {
-  display: flex;
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
 }
 
-.flex-column {
-  flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.align-items-center {
-  align-items: center;
+@media (min-width: 992px) {
+  .container {
+    max-width: 70%;
+  }
 }
 
 .text-center {
   text-align: center;
-}
-
-.grid {
-  display: grid;
 }
 
 input,

@@ -12,7 +12,8 @@ export default function Product({
 }) {
   return (
     <Layout title="Productos">
-      <main className={`${styles.main} container flex justify-center`}>
+      <h2 className="container">Nuestros productos</h2>
+      <main className={`${styles.main} container`}>
         {products.map((product) => (
           <ProductCard key={product.model} {...product} />
         ))}

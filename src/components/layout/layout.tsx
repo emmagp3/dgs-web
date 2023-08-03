@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
+import ContactButton from '../button/whatsappButton';
+import { useRouter } from 'next/router';
 
 interface LayoutProps {
   title: string;
@@ -8,6 +10,12 @@ interface LayoutProps {
 }
 
 export default function Layout({ title, children }: LayoutProps) {
+  const router = useRouter();
+
+  const onClickWhatsAppButton = () => {
+    router.push('https://wa.me/525624767064');
+  };
+
   return (
     <>
       <Head>
@@ -17,6 +25,7 @@ export default function Layout({ title, children }: LayoutProps) {
       </Head>
       <Navbar />
       {children}
+      <ContactButton onClick={onClickWhatsAppButton} isWhatsapp />
       <Footer />
     </>
   );

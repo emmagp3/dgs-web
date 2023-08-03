@@ -7,6 +7,7 @@ import Service from '@/components/service/service';
 export default function Servicios({ services }: { services: ServiceModel[] }) {
   return (
     <Layout title="Servicios">
+      <h2 className="container">Nuestros servicios</h2>
       <main className="container">
         {services.map((service) => (
           <Service key={service.id} {...service} />

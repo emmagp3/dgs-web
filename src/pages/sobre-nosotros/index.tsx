@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <Layout title="¿Quiénes Somos?">
       <div className={styles.hero}>
-        <h1 className={styles.title}>Acerca de Nosotros</h1>
+        <h2 className={styles.title}>Acerca de Nosotros</h2>
         <div className={`${styles.about} container`}>
           <div className={styles.element}>
             <h2 className={styles.subtitle}>Desarrollo</h2>
@@ -36,9 +36,9 @@ export default function AboutPage() {
         </div>
       </div>
       <main>
-        <div className={`${styles.misionVision} flex justify-center container`}>
-          <div className={styles.mvinfo}>
-            <h2 className={styles.subtitle}>Misión</h2>
+        <div className={`${styles.misionVisionSection} container`}>
+          <div className={styles.misionVisionContent}>
+            <h2>Misión</h2>
             <p>
               Nuestra visión como empresa es ser reconocidos por la excelencia
               en nuestros productos y servicios, y para lograrlo nos enfocamos
@@ -54,8 +54,8 @@ export default function AboutPage() {
               servicio de alta calidad.
             </p>
           </div>
-          <div className={styles.mvinfo}>
-            <h2 className={styles.subtitle}>Visión</h2>
+          <div className={styles.misionVisionContent}>
+            <h2>Visión</h2>
             <p>
               Nuestra misión es brindar a nuestros clientes productos confiables
               y duraderos que satisfagan sus necesidades y expectativas, y así

@@ -1,15 +1,21 @@
 import React, { MouseEventHandler } from 'react';
 import Button from './button';
+import styles from './button.module.css';
+import whLogo from '../../../public/whatsapp.svg';
+import Image from 'next/image';
 
 interface ContactButtonProps {
-  image?: string;
+  isWhatsapp?: boolean;
   onClick: MouseEventHandler;
 }
 
-export default function ContactButton({ image, onClick }: ContactButtonProps) {
-  return image ? (
-    <button onClick={onClick}>
-      <img src="whatsapp.svg" alt="Whatsapp Logo" />
+export default function ContactButton({
+  onClick,
+  isWhatsapp = false,
+}: ContactButtonProps) {
+  return isWhatsapp ? (
+    <button onClick={onClick} className={styles['wh-button']}>
+      <Image src={whLogo} alt="Whatsapp Logo" />
     </button>
   ) : (
     <Button variant="primary" onClick={onClick}>

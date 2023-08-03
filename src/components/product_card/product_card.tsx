@@ -18,10 +18,8 @@ export default function ProductCard({ model, name, image }: ProductCardProps) {
   };
 
   return (
-    <section
-      className={`${styles.product} flex flex-column align-items-center`}
-    >
-      <h2>{name}</h2>
+    <section className={styles.product}>
+      <h3>{name}</h3>
       <Image
         className={styles.image}
         src={image}

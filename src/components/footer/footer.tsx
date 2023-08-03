@@ -3,7 +3,7 @@ import styles from './footer.module.css';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <div className={`${styles.footerContent} container`}>
         <div>
           <h2>Horarios</h2>
           <p>Lun-Vie: 09:00 - 18:00</p>
@@ -15,9 +15,7 @@ export default function Footer() {
           <p>Miguel Hidalgo, CDMX</p>
         </div>
       </div>
-      <div>
-        <p>¡Síguenos en nuestras redes sociales!</p>
-      </div>
+      <p>¡Síguenos en nuestras redes sociales!</p>
     </footer>
   );
 }

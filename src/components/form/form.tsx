@@ -22,14 +22,12 @@ export default function Form() {
   };
 
   return (
-    <div
-      id="contacto"
-      className={`container flex flex-column align-items-center ${styles.form}`}>
+    <div id="contacto" className={`container ${styles.form}`}>
       <h3 className="text-center">
         ¡Solicita información especializada sobre nuestros productos!
       </h3>
-      <form onSubmit={onSubmit} className={`container grid ${styles.fields}`}>
-        <div className="flex flex-column">
+      <form onSubmit={onSubmit} className={`container ${styles.fields}`}>
+        <div className={styles.field}>
           <label htmlFor="nombre">Nombre: </label>
           <input
             type="text"
@@ -41,7 +39,7 @@ export default function Form() {
             onChange={onChangeFields}
           />
         </div>
-        <div className="flex flex-column">
+        <div className={styles.field}>
           <label htmlFor="apellido">Apellido: </label>
           <input
             type="text"
@@ -53,7 +51,7 @@ export default function Form() {
             onChange={onChangeFields}
           />
         </div>
-        <div className="flex flex-column">
+        <div className={styles.field}>
           <label htmlFor="email">Correo electrónico: </label>
           <input
             type="email"
@@ -65,7 +63,7 @@ export default function Form() {
             onChange={onChangeFields}
           />
         </div>
-        <div className="flex flex-column">
+        <div className={styles.field}>
           <label htmlFor="phone_number">Teléfono: </label>
           <input
             type="tel"
@@ -77,14 +75,15 @@ export default function Form() {
             onChange={onChangeFields}
           />
         </div>
-        <div className="flex flex-column">
+        <div className={styles.field}>
           <label htmlFor="message">Mensaje:</label>
           <textarea
             id="message"
             name="message"
             placeholder="Escribre un mensaje..."
             defaultValue={message}
-            onChange={onChangeFields}></textarea>
+            onChange={onChangeFields}
+          ></textarea>
         </div>
 
         <Button type="submit" variant="secondary">

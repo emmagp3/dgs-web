@@ -1,15 +1,32 @@
 .primary {
   background-color: #001449;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .secondary {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #001449;
 }
 
 .tiertary {
-  background-color: #005BC5;
-  color: #FFFFFF;
-  border: 0.1rem solid #005BC5;
+  background-color: #005bc5;
+  color: #ffffff;
+  border: 0.1rem solid #005bc5;
+}
+
+.wh-button {
+  background-color: transparent;
+  width: fit-content;
+  border: none;
+  border-radius: 1rem;
+  position: fixed;
+  padding: 0;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.wh-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

@@ -1,49 +1,56 @@
 .hero {
-  color: #FFFFFF;
+  color: #ffffff;
   background-image: url('../../../public/main.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 0 4rem 0;
+  min-height: 50rem;
   background-size: cover;
-  height: 52rem;
   background-position: center center;
 }
 
 .title {
   text-align: center;
+  margin: 0;
   padding: 2rem 0;
+  color: #ffffff;
 }
 
 .about {
-  height: 80%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .element {
-  background-color: #FFFFFF;
-  color: #404040;
-  height: 21rem;
+  background-color: #ffffff;
   padding: 1rem;
+  border-radius: 2rem;
+}
+
+.element h2 {
   text-align: center;
-  border-radius: 4rem;
+  margin: 0;
 }
 
-.subtitle {
-  text-align: center;
-  color: #005BC5;
-}
-
-.misionVision {
-  flex-wrap: wrap;
-  padding-top: 5rem;
-}
-
-.misionVision p {
-  margin: auto 5rem 5rem auto;
-}
-
-.mvinfo p {
-  width: 50rem;
-  color: #404040;
+.misionVisionSection {
+  margin: 4rem auto;
   text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .misionVisionSection {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .misionVisionSection h2 {
+    text-align: center;
+  }
 }
