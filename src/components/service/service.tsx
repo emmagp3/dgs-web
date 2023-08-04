@@ -4,7 +4,7 @@ import styles from './service.module.css';
 
 export default function Service({ name, description }: ServiceModel) {
   return (
-    <div className={`${styles.service} flex flex-column`}>
+    <div className={`${styles.service}`}>
       <h3 className={styles.title}>{name}</h3>
       <p className={styles.description}>{description}</p>
       <Button variant="primary">Más información</Button>

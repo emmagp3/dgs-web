@@ -1,10 +1,21 @@
 .product {
   display: flex;
   flex-direction: column;
+  min-width: 20rem;
+  padding: 1rem;
+  width: auto;
   align-items: center;
   flex: 1;
-  padding: 0.5rem 1rem;
   gap: 2rem;
   border: 0.2rem #e1e1e1 solid;
   border-radius: 1rem;
+}
+
+.product h3 {
+  margin: 0;
+}
+
+.product button {
+  width: 100%;
+  max-width: 100%;
 }

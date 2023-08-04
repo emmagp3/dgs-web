@@ -7,10 +7,19 @@
 }
 
 .service {
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   text-align: justify;
 }
 
-.service > button {
-  align-self: flex-end;
+.service button {
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .service button {
+    width: 20rem;
+    align-self: flex-end;
+  }
 }
