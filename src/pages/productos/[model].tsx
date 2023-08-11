@@ -8,7 +8,6 @@ import Layout from '@/components/layout/layout';
 import { useRouter } from 'next/router';
 import ContactButton from '@/components/button/whatsappButton';
 import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
-import Link from 'next/link';
 import styles from './[model].module.css';
 import Button from '@/components/button/button';
 
@@ -26,9 +25,6 @@ export default function ProductPage({ product }: { product: ProductModel }) {
   return (
     <Layout title={name}>
       <main className="container">
-        {/* <Link className={styles.goBack} href="/productos">
-          Ver productos
-        </Link> */}
         <div className={`${styles.details}`}>
           <img className={styles.image} src={image} alt={name} />
           <div className={styles.content}>

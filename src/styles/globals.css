@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Ysabeau+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:wght@400;700;900&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -23,13 +23,15 @@ h6 {
 }
 
 p {
+  font-weight: 700;
   color: #404040;
+  font-weight: lighter;
 }
 
 body {
-  font-family: 'Fugaz One', sans-serif;
   font-size: 1.4rem;
   line-height: 1.5;
+  font-family: 'Fugaz One', cursive;
 }
 
 #__next {
@@ -85,7 +87,4 @@ input {
 textarea {
   height: 20rem;
   resize: none;
-}
-
-footer {
 }

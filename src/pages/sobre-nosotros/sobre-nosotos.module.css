@@ -1,9 +1,8 @@
 .hero {
-  color: #ffffff;
   background-image: url('../../../public/main.png');
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  display: grid;
+  align-items: flex-start;
+  text-align: center;
   padding: 0 0 4rem 0;
   min-height: 50rem;
   background-size: cover;
@@ -14,6 +13,8 @@
   text-align: center;
   margin: 0;
   padding: 2rem 0;
+  align-self: flex-start;
+  font-size: 6rem;
   color: #ffffff;
 }
 
@@ -35,8 +36,8 @@
 }
 
 .element h2 {
-  text-align: center;
   margin: 0;
+  color: #005bc5;
 }
 
 .misionVisionSection {
