@@ -24,8 +24,10 @@ export default function Layout({ title, children }: LayoutProps) {
         <link rel="icon" href="/dgs-logo.png" sizes="any" />
       </Head>
       <Navbar />
-      {children}
-      <ContactButton onClick={onClickWhatsAppButton} isWhatsapp />
+      <main>
+        {children}
+        <ContactButton onClick={onClickWhatsAppButton} isWhatsapp />
+      </main>
       <Footer />
     </>
   );

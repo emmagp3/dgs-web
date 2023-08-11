@@ -9,11 +9,11 @@ export default function Servicios({ services }: { services: ServiceModel[] }) {
   return (
     <Layout title="Servicios">
       <h2 className="container">Nuestros servicios</h2>
-      <main className={`container ${styles.services}`}>
+      <div className={`container ${styles.services}`}>
         {services.map((service) => (
           <Service key={service.id} {...service} />
         ))}
-      </main>
+      </div>
     </Layout>
   );
 }

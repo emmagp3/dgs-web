@@ -10,9 +10,7 @@ import styles from '../styles/Home.module.css';
 export default function Home({ products }: { products: ProductCardProps[] }) {
   return (
     <Layout title="Inicio">
-      <main>
-        <PrincipalHero />
-      </main>
+      <PrincipalHero />
       <div className={`container ${styles.products}`}>
         <h2 className="text-center">Nuestros productos</h2>
         <div className="flex">

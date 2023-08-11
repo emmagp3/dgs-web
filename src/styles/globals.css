@@ -32,6 +32,12 @@ body {
   line-height: 1.5;
 }
 
+#__next {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 button {
   font-size: 1.4rem;
   height: 4.4rem;
@@ -79,4 +85,7 @@ input {
 textarea {
   height: 20rem;
   resize: none;
+}
+
+footer {
 }
