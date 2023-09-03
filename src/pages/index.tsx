@@ -1,5 +1,5 @@
 import Layout from '@/components/layout/layout';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { getAllProductsCard } from '../../lib/stores';
 import type { ProductCardProps } from '@/components/product_card/product_card';
 import ProductCard from '@/components/product_card/product_card';
@@ -24,8 +24,7 @@ export default function Home({ products }: { products: ProductCardProps[] }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  // Solo obtiene los primeros tres productos.
+export const getServerSideProps: GetServerSideProps = async () => {
   const products = getAllProductsCard().slice(0, 3);
   return {
     props: {

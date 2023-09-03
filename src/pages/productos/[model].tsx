@@ -1,57 +1,25 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import {
   getAllProductPaths,
   getProductDetails,
 } from '../../../lib/stores/product.store';
 import type { ProductModel } from '../../../lib/models';
 import Layout from '@/components/layout/layout';
-import { useRouter } from 'next/router';
-import ContactButton from '@/components/button/whatsappButton';
-import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
-import styles from './[model].module.css';
-import Button from '@/components/button/button';
+import ProductDetails from '@/components/product_details/productDetails';
 
 export default function ProductPage({ product }: { product: ProductModel }) {
-  const router = useRouter();
-  const { name, model, description, image } = product;
-
-  const onClickWhatsAppButton = () => {
-    const message = parseUrl(
-      `https://wa.me/525624767064?text=Me gustaría obtener más información acerca del producto ${name} con el modelo ${model}. ${window.location.href}`
-    );
-    router.push(message);
-  };
+  const { name } = product;
 
   return (
     <Layout title={name}>
       <main className="container">
-        <div className={`${styles.details}`}>
-          <img className={styles.image} src={image} alt={name} />
-          <div className={styles.content}>
-            <div>
-              <h2 className={styles.title}>{name}</h2>
-              <p className={styles.model}>
-                Modelo: <small>{model}</small>
-              </p>
-            </div>
-            <p className={styles.description}>{description}</p>
-            <div className={styles.buttons}>
-              <Button
-                variant="secondary"
-                onClick={() => router.push('/productos')}
-              >
-                Volver a Productos
-              </Button>
-              <ContactButton onClick={onClickWhatsAppButton} />
-            </div>
-          </div>
-        </div>
+        <ProductDetails product={product} />
       </main>
     </Layout>
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getServerSidePaths = async () => {
   const paths = getAllProductPaths();
   return {
     paths,
@@ -59,7 +27,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const model = params?.model as string;
   const product = getProductDetails(model);
 
