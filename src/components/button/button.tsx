@@ -19,7 +19,6 @@ export default function Button({
   onClick,
   children,
 }: ButtonProps) {
-  console.log(styles);
   return (
     <button
       type={type}
